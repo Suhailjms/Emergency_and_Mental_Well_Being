@@ -15,14 +15,14 @@ public class RegisterDto {
     @NotEmpty
     private String lastname;
 
-    @NotEmpty
+//    @NotEmpty
     private String username;
 
     @NotEmpty
     private String email;
 
+//    @Size(min = 6, message = "Minimum Password length is 6 characters")
     @NotEmpty
-    @Size(min = 6, message = "Minimum Password length is 6 characters")
     private String password;
 
     private String phoneNumber;
