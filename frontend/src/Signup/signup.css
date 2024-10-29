@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(143, 187, 212);
+}
+.uil {
+  font-size: 25px;
+}
+.signupbody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.uil-eye-slash {
+  position: absolute;
+  font-size: 25px;
+  margin-left: -30px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.uil-eye {
+  position: absolute;
+  font-size: 25px;
+  margin-left: -30px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.signupform_Page {
+  padding-top: 20px;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+.signupform_Page > form {
+  background-color: aliceblue;
+  width: 850px;
+  height: 820px;
+  border-radius: 20px;
+  padding-left: 250px;
+}
+form > .signupinput_field {
+  margin: 10px;
+  margin-left: 100px;
+  padding: 20px;
+  margin-top: 20px;
+  padding-top: 35px;
+  margin-top: 10px;
+}
+.signupinput_field > i {
+  font-weight: bolder;
+}
+.signupinput_field > label {
+  font-weight: bolder;
+  margin-left: 10px;
+}
+.signupinput_field > input {
+  position: relative;
+  border: 2px solid transparent;
+  background-color: transparent;
+  width: 500px;
+  outline: none;
+  padding-top: 30px;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #ccc;
+  transition: all ease 0.7s;
+  color: grey;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+.signupinput_field > input:is(:focus, :valid) {
+  border: none;
+  border-bottom: 2px solid rgb(95, 113, 190);
+}
+.signupinput_field > input::placeholder {
+  font-size: 1.2rem;
+}
+.signupinput_field > input[type="submit"] {
+  background-color: rgb(66, 109, 202);
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: -10px;
+}
+.signupinput_field > span {
+  margin-left: -290px;
+  color: white;
+  position: absolute;
+  font-size: 1.2rem;
+  margin-top: 7px;
+}
+.signupinput_field > input[type="submit"]:hover {
+  background-color: rgb(15, 38, 71);
+  transition: all ease 1s;
+  cursor: pointer;
+}
+/* p {
+  margin-top: -10px;
+  margin-left: 240px;
+  color: green;
+  padding-top: 60px;
+} */
+ p{
+   margin-top: 20px; /* Adjust margin to create spacing below the form */
+   text-align: center; 
+   color: green;
+   padding-top: 20px;
+ }
+a {
+  margin-left: 10px;
+}
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+.signuperrorShow {
+  color: red;
+  margin: 0px;
+  padding: 0px;
+  height: 1px;
+  padding-top: 10px;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: -30px;
+}
+h1 {
+  position: absolute;
+  margin-top: -800px;
+  color: white;
+  margin-left: 20px;
+  animation: colorChange 2s infinite;
+}
+@keyframes colorChange {
+  0% {
+    color: grey;
+  }
+  50% {
+    color: rgba(0, 0, 0, 0.61);
+  }
+  100% {
+    color: black;
+  }
+}
+
+h1::selection,
+label::selection {
+  background-color: transparent;
+}
+.requiredPassword {
+  color: red;
+  background-color: transparent;
+}
+.requiredEmail {
+  color: red;
+  background-color: transparent;
+  margin-left: 2px;
+}
