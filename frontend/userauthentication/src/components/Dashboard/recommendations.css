@@ -1,0 +1,38 @@
+.recommendations_body {
+  margin: -20px;
+  margin-top: -40px;
+  padding: 0px;
+  background-color: aliceblue;
+  width: 1900px;
+  height: 1000px;
+  justify-content: center;
+  align-items: center;
+}
+.recommendations_testresult {
+  margin-top: 10px;
+  margin-top: 40px;
+  color: green;
+  margin-left: 800px;
+  font-weight: bold;
+  font-size: 40px;
+}
+.GreenLine {
+  height: 5px;
+  background-color: rgb(9, 192, 9);
+  margin-top: 20px;
+}
+span {
+  display: flex;
+  margin-left: 800px;
+  margin-top: 40px;
+  font-size: 30px;
+}
+.recommendations_message > h2 {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.depression_level {
+  margin-left: 500px;
+  margin-top: 40px;
+}
