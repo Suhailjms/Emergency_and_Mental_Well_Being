@@ -1,0 +1,147 @@
+/* ChatBot.css */
+.chatbot-container {
+  background-color: #f7fbfd;  /* Very light blue background */
+  width: 100%;
+  max-width: 400px;
+  min-height: 500px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-header {
+  background-color: #b3d9f7;  /* Light blue */
+  color: #333;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-header h2 {
+  margin: 0;
+}
+
+.showHistory {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #333;
+}
+
+.showHistory i {
+  margin-right: 8px;
+}
+
+.chatbot-box {
+  padding: 20px;
+  background-color: #ffffff;
+  flex-grow: 1;
+  overflow-y: auto;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.message {
+  margin-bottom: 15px;
+}
+
+.message.user {
+  text-align: right;
+}
+
+.message.bot {
+  text-align: left;
+}
+
+.message-content {
+  background-color: #e8f4fd;  /* Very light blue */
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.message.user .message-content {
+  background-color: #b3d9f7;  /* Light blue */
+  color: white;
+}
+
+.message.bot .message-content {
+  background-color: #e8f4fd;  /* Very light blue */
+  color: #333;
+}
+
+.chatbot-input-container {
+  display: flex;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 0 0 8px 8px;
+}
+
+.chatbot-input-container input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #c4e1f5;  /* Very light blue border */
+  border-radius: 20px;
+  font-size: 16px;
+  margin-right: 10px;
+  background-color: #f1f8fe;  /* Light blue background for input */
+}
+
+.chatbot-input-container button {
+  background-color: #b3d9f7;  /* Light blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.chatbot-input-container button:hover {
+  background-color: #a0c4e9; /* Slightly darker light blue on hover */
+}
+
+.unique-chatbotHistory-body {
+  padding: 20px;
+  background-color: #f7fbfd;  /* Very light blue background */
+}
+
+.unique-chatbotHistory-container {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.unique-chatbotHistory-chats h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.DateShow {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.query {
+  font-size: 16px;
+  color: #333;
+}
+
+.response {
+  font-size: 16px;
+  color: #555;
+}
+
+.scheduleTime {
+  font-size: 14px;
+  color: #888;
+}

@@ -1,0 +1,210 @@
+/* Body Background */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f7f6; /* Light greyish background for a soft look */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* overflow: hidden; */
+}
+.login-page {
+}
+/* Container for the login page */
+.login-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for container */
+.login-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Left section for the image */
+.login-container .image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-container .image-section img {
+  width: 65%;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.login-container .image-section img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Right section for the form */
+.login-container .form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+h2 {
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Input Fields */
+.form-group > input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  border: 1px solid #2980b9;
+  border-radius: 6px;
+  margin-top: 1rem;
+  color: #2c3e50;
+  transition: border-color 0.3s ease;
+  width: 400px; /* Make input fields stretch to full width */
+}
+
+.form-group > input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Button Styling */
+button {
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #2980b9;
+  color: #ffffff;
+  margin-top: 20px;
+
+  width: 80px; /* Make button full width */
+}
+button.login-btn {
+  margin-bottom: 10px; /* Add space below the Login button */
+}
+
+button.reset-btn {
+  margin-top: 10px; /* Add space above the Reset button */
+}
+button:hover {
+  background-color: #3498db;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Styles */
+.uil,
+.toggle-password {
+  color: #2980b9;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.uil:hover,
+.toggle-password:hover {
+  color: #3498db;
+}
+
+/* Links Styling */
+.text-teal-500 {
+  color: #2980b9;
+}
+
+.text-teal-500:hover {
+  color: #3498db;
+}
+
+.text-teal-600 {
+  color: #0078d7;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.text-teal-600:hover {
+  color: #005bb5;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Flex for buttons and links */
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.block {
+  margin-top: -28px;
+  margin-left: 20px;
+}
+
+.w-16 {
+  margin-left: 0px;
+  padding-top: -20px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .login-container {
+    grid-template-columns: 1fr; /* Stack form and image vertically */
+    padding: 20px;
+  }
+
+  .image-section {
+    display: none; /* Hide image on small screens */
+  }
+
+  .form-section {
+    align-items: center;
+  }
+
+  .login-container img {
+    width: 80%; /* Adjust image size */
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  input,
+  button {
+    font-size: 0.95rem;
+  }
+
+  button {
+    margin-top: 15px;
+  }
+}
+.registerhere {
+  margin-left: -100px;
+  color: red;
+}
