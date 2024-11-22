@@ -31,7 +31,7 @@ CREATE TABLE `chatlog` (
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `chatlog_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `person` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `chatlog` (
 
 LOCK TABLES `chatlog` WRITE;
 /*!40000 ALTER TABLE `chatlog` DISABLE KEYS */;
-INSERT INTO `chatlog` VALUES (1,1,'I\'m feeling hopeless','This is a mocked AI response for: I\'m feeling hopeless','2024-11-14 18:11:26'),(2,2,'I\'m feeling hopeless','This is a mocked AI response for: I\'m feeling hopeless','2024-11-14 18:32:51'),(3,2,'I can\'t stop crying','Crying can be a way to release emotions. It\'s okay to express how you feel. Remember, you are not alone in this.','2024-11-14 20:30:53');
+INSERT INTO `chatlog` VALUES (1,1,'I\'m feeling hopeless','This is a mocked AI response for: I\'m feeling hopeless','2024-11-14 18:11:26'),(2,2,'I\'m feeling hopeless','This is a mocked AI response for: I\'m feeling hopeless','2024-11-14 18:32:51'),(3,2,'I can\'t stop crying','Crying can be a way to release emotions. It\'s okay to express how you feel. Remember, you are not alone in this.','2024-11-14 20:30:53'),(4,2,'I can\'t stop crying','Crying can be a way to release emotions. It\'s okay to express how you feel. Remember, you are not alone in this.','2024-11-18 12:19:47');
 /*!40000 ALTER TABLE `chatlog` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,13 +87,16 @@ DROP TABLE IF EXISTS `task`;
 CREATE TABLE `task` (
   `id` int NOT NULL AUTO_INCREMENT,
   `user_id` int NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `due_date` date DEFAULT NULL,
-  `completed` tinyint(1) DEFAULT '0',
+  `title` varchar(255) NOT NULL,
+  `description` text,
+  `frequency` varchar(50) DEFAULT NULL,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `due_date` datetime DEFAULT NULL,
+  `is_completed` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`),
-  KEY `fk_task_user_id` (`user_id`),
-  CONSTRAINT `fk_task_user_id` FOREIGN KEY (`user_id`) REFERENCES `person` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `task_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `person` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,7 +105,37 @@ CREATE TABLE `task` (
 
 LOCK TABLES `task` WRITE;
 /*!40000 ALTER TABLE `task` DISABLE KEYS */;
+INSERT INTO `task` VALUES (2,2,'Complete Documentation','Finalize the project documentation for submission.','Weekly','2024-11-18 12:47:30','2024-11-25 10:30:00',0);
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `videoreco`
+--
+
+DROP TABLE IF EXISTS `videoreco`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `videoreco` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `user_id` int NOT NULL,
+  `score` int NOT NULL,
+  `genre` varchar(100) DEFAULT NULL,
+  `video_name` varchar(255) NOT NULL,
+  `video_url` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_user` (`user_id`),
+  CONSTRAINT `fk_user` FOREIGN KEY (`user_id`) REFERENCES `person` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `videoreco`
+--
+
+LOCK TABLES `videoreco` WRITE;
+/*!40000 ALTER TABLE `videoreco` DISABLE KEYS */;
+/*!40000 ALTER TABLE `videoreco` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -143,4 +176,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-14 20:38:32
+-- Dump completed on 2024-11-22  9:45:24
