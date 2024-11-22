@@ -81,7 +81,6 @@ public class AuthController {
         }
         Map<String, Object> response = new HashMap<>();
         if (personService.authenticateUser(loginDto).containsKey("error")) {
-            System.out.print("Hello");
             return ResponseEntity.badRequest().body(response);
         }
         Optional<Person> person = personRepository.findByEmail(loginDto.getEmail());
